@@ -14,8 +14,6 @@
  *                      Please see `settings/_all.scss` for a full table of
  *                      contents.
  * THEMES
- * Red..................Simple red theme for the site.
- * Custom...............Custom-specific overrides.
  *
  *
  * TOOLS
@@ -32,6 +30,7 @@
  * Normalize.css........A level playing field.
  * Reset................A pared back reset to remove margins.
  * Shared...............Sensibly and tersely share global commonalities.
+ * Font.................Included a call to the font in Google. // Don't use in production websites
  *
  * ELEMENTS
  * Page.................Page-level styles (HTML element).
@@ -42,49 +41,47 @@
  * Quotes...............Styling for blockquotes, etc.
  *
  * OBJECTS
- * Wrappers.............Wrappers and page constraints.
- * Layout...............Generic layout module.
- * Headline.............Simple object for structuring heading pairs.
- * Media................The media object.
- * List-bare............Lists with no bullets or indents.
- * List-inline..........Simple abstraction for setting lists out in a line.
- * Crop.................A container for cropping image and media content.
- *
+ * Hero.................A wrapper for the main page
  *
  * COMPONENTS
- *
- *
+ * Button...............Buttons and variations
+ * Link.................Custom link for the page
+ * Logo.................All the variations with the logo of the brand
  *
  * UTILITIES
- * Headings.............Reassigning our heading styles to helper classes.
- * Widths...............Simple width helper classes.
+ * Nowrap...............Avoid specific content broken in different lines
  * Healthcheck..........Visual health-check tool.
  * Debug................Highlight potentially troublesome code.
- * Shame.css............Short-term hacks and quick-fixes.
  */
 
 
-@import "settings/all";
+@import "0_settings/all";
 
-@import "generic/generic.box-sizing";
-@import "generic/generic.normalize";
-@import "generic/generic.reset";
-@import "generic/generic.shared";
-@import "generic/generic.font";
+@import "0_themes/all";
 
-@import "elements/elements.headings";
-@import "elements/elements.images";
-@import "elements/elements.links";
-@import "elements/elements.lists";
-@import "elements/elements.page";
-@import "elements/elements.quotes";
+@import "0_tools/all";
 
-@import "objects/objects.header";
-@import "objects/objects.hero";
+@import "1_generic/generic.box-sizing";
+@import "1_generic/generic.normalize";
+@import "1_generic/generic.reset";
+@import "1_generic/generic.shared";
+@import "1_generic/generic.font";
 
-@import "components/components.button";
-@import "components/components.link";
-@import "components/components.logo";
+@import "2_elements/elements.headings";
+@import "2_elements/elements.images";
+@import "2_elements/elements.links";
+@import "2_elements/elements.lists";
+@import "2_elements/elements.page";
+@import "2_elements/elements.quotes";
 
-@import "utilities/utilities.healthcheck";
-@import "utilities/utilities.debug";
+@import "3_objects/objects.hero";
+
+@import "4_components/components.button";
+@import "4_components/components.link";
+@import "4_components/components.logo";
+
+@import "5_utilities/utilities.healthcheck";
+@import "5_utilities/utilities.debug";
+@import "5_utilities/utilities.nowrap";
+
+@import "6_shame/all";
