@@ -1,4 +1,9 @@
 .c-Button {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: $color-white;
+  border-radius: 1.5rem;
+  padding: 1rem 2rem;
 
   &:hover {
     text-decoration: none;
@@ -6,11 +11,6 @@
 }
 
 .c-Button--primary {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: $color-white;
-  border-radius: 1.5rem;
-  padding: 1rem 2rem;
   background: linear-gradient(45deg, #a73cff 0%,#767cff 64%,#3bbffe 100%);
   transition: $global-transition $global-transition--button;
 
@@ -20,17 +20,9 @@
   }
 }
 
-.c-Button--margin-right {
-  margin-right: 0.25rem;
-}
 
 @media screen and (min-width: 768px) {
   .c-Button--primary {
     padding: 1rem 3rem;
   }
-
-  .c-Button--margin-right {
-    margin-right: 1rem;
-  }
-
 }
