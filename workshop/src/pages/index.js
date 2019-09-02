@@ -5,7 +5,7 @@ import Header from "../components/header"
 import Button from "../components/button"
 
 export default () => 
-    <div className="o-Layout">
+    <div class="o-Layout">
         <div class="o-Layout__item">
             <Header headerText="Workshop" />
             <ItemList />
